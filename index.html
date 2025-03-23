@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMENTO</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: rgb(4, 4, 4);
+}
+        .header {
+            background-color: #444444;
+            color: white;
+            padding: 11px;
+            font-size: 24px;
+            font-family: 'Georgia', serif; 
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 8px;
+                font-size: 20px;
+            }
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 10px;
+        }
+        .nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s;
+        }
+        .nav button:hover {
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 20px;
+        }
+       /* .highlight-box {
+    background: linear-gradient(135deg, #a7daf3, #ffcbef); /* Gradient background */
+    /* color: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    border: 2px solid #f2ccf6;} Optional border */
+
+            .highlight-box {
+            background: linear-gradient(135deg, #a7daf3, #ffcbef);
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px auto;
+            width: 70%;
+            max-width: 400px;
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+            border: 2px solid #f2ccf6;
+        }
+        .button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #3d0630;
+        }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h3 {
+            background-color: #4f3a4c;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            display: inline-block;
+
+        }
+    </style>
+    <script>
+        function showPage(page) {
+            const content = document.getElementById("content");
+            if (page === "home") {
+                content.innerHTML = `
+                    <div class="section">
+                        <h2>Welcome to Momento</h2>
+                        <p>Capturing your moments and delivering cinematic reels instantly.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3>Why Choose Us?</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>🎥 High-quality instant reels</li>
+                            <li>📸 Professional reel makers</li>
+                            <li>⚡ Fast delivery</li>
+                            <li>📲 Perfect for events & social media</li>
+                        </ul>
+                    </div>
+                    <div class="section">
+                        <div class="highlight-box">
+                        <h3>How It Works</h3>
+                        <p>1️⃣ Attend an event 🎉</p>
+                        <p>2️⃣ We capture your moments 📸</p>
+                        <p>3️⃣ Get your reel instantly 🎬</p>
+                    </div>
+                    </div>
+                    <div class="section">
+                        <h3>Book Now</h3>
+                        <p>DM us on <a href="https://www.instagram.com/momento" target="_blank" style="color: #f39c12;">Instagram</a> to book your reel session!</p>
+                    </div>
+                `;
+            } else if (page === "packages") {
+                content.innerHTML = `
+                    <h2>Our Packages</h2>
+                    <div class="highlight-box">
+                        <h3><i>Hourly Package - ₹1600<i/></h3>
+                        <p>✔ 60-second reel</p>
+                        <p>✔ Expert Reelmaker</p> 
+                        <p>✔ Live Stories</p> 
+                        <p>✔ Instant Delivery</p> 
+                        <p>✔ Trained Professionals</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3><i>One Day Package - ₹4,999<i/></h3>
+                        <p>✔ Up to 4 Hours</p> 
+                        <p>✔ 3 Reels</p> 
+                        <p>✔ Live Stories</p> 
+                        <p>✔ Mobile Portraits</p> 
+                        <p>✔ Instant Delivery</p> 
+                        <p>✔ Trained Professionals</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h3><i>Wedding Package - ₹16,999<i/></h3>
+                        <p>✔ Covers up to 4 events</p> 
+                        <p>✔ 10 Cinematic Reels</p> 
+                        <p>✔ Live Stories & Behind-the-Scenes Coverage</p> 
+                        <p>✔ Mobile Portraits</p> 
+                        <p>✔ Instant Delivery</p> 
+                        <p>✔ Trained Professionals</p>
+                    </div>
+                    <p><b>Extra Reels:</b> ₹449 per reel</p>
+                `;
+            }
+            else if (page === "contact") {
+                content.innerHTML = `
+ <h2>Support & Contact</h2>
+                    <p>Need assistance? Our support team is here to help you 24/7.</p>
+
+                    <h3>Contact Us</h3>
+                    <p><b>Email:</b> <a href="mailto:support@momento.com">support@momento.com</a></p>
+                    <p><b>Phone:</b> <a href="tel:+919100217060">+91-9100217060</a></p>
+                    <p><b>Working Hours:</b> 9 AM - 7 PM (IST)</p>
+                    <p><a href="https://wa.me/9100217060" target="_blank" style="color: #25D366; font-weight: bold; text-decoration: none;">Chat with us on WhatsApp</a></p>
+                    <h3>Follow Us</h3>
+                    <p>📷 Instagram: <a href="https://www.instagram.com/momento" target="_blank" style="color: #f39c12;">@momento</a></p>
+                    <h3>FAQs</h3>
+                    <ul class="package-list">
+                        <b>How do I book a package?</b>
+                        <p>Look up the packages you are interested in and DM us on Instagram or WhatsApp.</p></li>
+                        <b>Can I reschedule or cancel my booking?</b>
+                        <p>You can cancel or reschedule your booking up to 6 hours before the event.</p></li>
+                        <b>When should I make the payment?</b>
+                        <p>Advance payment is required to confirm your booking.</p></li>
+                    </ul>
+                    <h3>Still Need Help?</h3>
+                    <p>If you have any other questions, feel free to reach out to us anytime.</p>
+                                        <div class="contact-form">
+                        <h3>Get in Touch</h3>
+                        <form action="https://formspree.io/f/xeoagqer" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                            <button class="button" type="submit">Send Message</button>
+                        </form>
+                    </div>`;
+                }}
+    </script>
+</head>
+<body onload="showPage('home')">
+    <div class="header"><h1>MOMENTO</h1>
+    <p>Book professional reel makers instantly!</p>
+</div>
+    <nav class="nav">
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('packages')">Packages</button>
+        <button onclick="showPage('contact')">Contact Us</button>
+    </nav>
+    <div id="content"></div>
+</body>
+</html>
